@@ -1,4 +1,3 @@
-# wooknam29.github.io
-nam的博客
+# nam的笔记
 
 第一次创建了自己的博客
