@@ -1,3 +1,9 @@
+---
+title: "idea编译问题"
+date: 2024-02-07T15:05:28+08:00
+draft: true
+---
+
 ## 问题梳理
 1、切换分支/新打开项目，报java: 程序包com.tencent.beacon.plugins.xxxx.xxxx不存在
 

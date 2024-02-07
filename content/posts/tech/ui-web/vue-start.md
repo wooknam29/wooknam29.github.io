@@ -1,3 +1,9 @@
+---
+title: "Vue入门"
+date: 2023-06-07T15:05:28+08:00
+draft: true
+---
+
 参考文档：https://v2.cn.vuejs.org/v2/guide/instance.html
 
 ## VUE实例

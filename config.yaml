@@ -1,0 +1,102 @@
+#基础配置
+baseURL: 'http://wooknam29.github.io'
+languageCode: 'zh-CN'
+title: 'nannan的博客'
+theme: 'hugo-PaperMod'
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+    
+
+#配置菜单
+menu:
+  main:
+    - name:  导航
+      url: archives
+      weight: 10
+    - name: 分类
+      url: tags/
+      weight: 10
+    - name: 关于我
+      url: about/
+      weight: 10
+    - name: 首页
+      url: /
+      weight: 10 
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+#主题配置参数
+params:
+  defaultTheme: auto
+  env: development # to enable google analytics, opengraph, twitter-cards and schema.
+  title: ExampleSite
+  description: "ExampleSite description"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+  permalinks: #访问博客网址显示形式
+    posts: "posts/:title/"
+  ShowToc: true # 显示目录
+  TocOpen: false # 自动展开目录
+  comments: true
+
+  homeInfoParams:
+    Title: "nannan的博客"
+    Content: >
+      Welcome to my blog
+
+  socialIcons:
+    - name: Github
+      url: "https://github.com/wooknam29"
+    - name: Email
+      url: about/
+
+  label:
+    text: "文章"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: nannan's blog
+    subtitle: "记录"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+          - name: 技术
+            url: posts/tech
+          - name: 阅读
+            url: posts/read
+          - name: 生活
+            url: posts/life
+
+    
