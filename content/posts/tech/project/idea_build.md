@@ -1,7 +1,7 @@
 ---
 title: "idea编译问题"
 date: 2024-02-07T15:05:28+08:00
-draft: true
+# draft: true
 ---
 
 ## 问题梳理

@@ -11,6 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Wed, 07 Feb 2024 15:05:28 +0800</lastBuildDate>
     <atom:link href="http://wooknam29.github.io/posts/tech/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>idea编译问题</title>
+      <link>http://wooknam29.github.io/posts/tech/project/idea_build/</link>
+      <pubDate>Wed, 07 Feb 2024 15:05:28 +0800</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/project/idea_build/</guid>
+      <description>问题梳理 1、切换分支/新打开项目，报java: 程序包com.tencent.beacon.plugins.xxxx.xxxx不存在
+原因：远程的包没有加载进来
+解决方法：
+（1）maven那里选择 ignore projects
+（2）invalidate caches 全部勾选，然后进来后到pom.xml下Reload projects，发现成功</description>
+    </item>
   </channel>
 </rss>
