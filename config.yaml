@@ -88,10 +88,10 @@ params:
     enabled: true # needs to be explicitly set
     title: nannan's blog
     subtitle: "记录"
-    imageUrl: "<img location>"
+    imageUrl: img/icon.png
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: 头像
     buttons:
           - name: 技术
             url: posts/tech
