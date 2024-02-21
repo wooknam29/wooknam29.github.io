@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>大数据 on nannan的博客</title>
+    <link>http://wooknam29.github.io/posts/tech/data/</link>
+    <description>Recent content in 大数据 on nannan的博客</description>
+    <image>
+      <title>nannan的博客</title>
+      <url>http://wooknam29.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://wooknam29.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 21 Feb 2024 16:43:00 +0800</lastBuildDate>
+    <atom:link href="http://wooknam29.github.io/posts/tech/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>spark</title>
+      <link>http://wooknam29.github.io/posts/tech/data/spark/</link>
+      <pubDate>Wed, 21 Feb 2024 16:43:00 +0800</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/data/spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MapReduce介绍</title>
+      <link>http://wooknam29.github.io/posts/tech/data/mapreduce/</link>
+      <pubDate>Wed, 21 Feb 2024 16:00:00 +0800</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/data/mapreduce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>大数据基本概念</title>
+      <link>http://wooknam29.github.io/posts/tech/data/basic/</link>
+      <pubDate>Tue, 20 Feb 2024 19:29:00 +0000</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/data/basic/</guid>
+      <description>数据湖和数据仓 Data Lake:它可以容纳结构化数据、半结构化数据和非结构化数据，包括关系型数据库、日志文件、图像、音频、视频等。数据湖通常采用延迟处理的方式，即将数据存储在原始形式下，只在需要时进行处理和转换。数据湖提供了灵活的数据存储和处理解决方案，适用于各种数据分析和处理需求。
+Data Warehouse:是一个用于存储和管理已经经过清洗、集成和转换的结构化数据的存储库。数据仓库通常用于支持决策支持和业务智能的需求，提供了一种高度结构化和优化的数据存储和查询环境。数据仓库中的数据经过ETL（抽取、转换、加载）过程，以满足特定的分析和报告需求。
+DWS: 数据仓库系统。存储和管理已经经过清洗、集成和转换的结构化数据的存储库。
+DWD: 数据仓库设计。
+几种数据导入方式 Routine Load: Broker Load: Spark Load: Stream Load:
+bitmap indexing 位图索引 概念：用二进制01来表示某条记录的某列是否等于某个值
+优点：在进行多个条件筛选的时候，可以直接使用多个bitmap进行与操作，减少了扫描的情况
+适用场景：低基数情况、只读表和不频繁更新的表（存储和构建需要大量开销）、适合count distinct的场景、
+CTEs common table expressions,常见表表达式（临时表）
+用法：WITH xxx AS</description>
+    </item>
+    <item>
+      <title>starrocks</title>
+      <link>http://wooknam29.github.io/posts/tech/data/starrocks/</link>
+      <pubDate>Tue, 20 Feb 2024 16:25:00 +0800</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/data/starrocks/</guid>
+      <description>特性和使用场景 特性 StarRocks 采用 MPP (Massively Parallel Processing) 大规模并行执行框架 MPP 计算模型实现：每个 task 被绑定到持有该数据的 Executor 上，由于 SR 表的分组分桶特性，数据会按 key 分组存储到节点上，相当于每个节点都拥有部分数据，那么使得单个查询请求可以充分利用所有执行节点的资源。
+优点：充分利用所有执行节点资源
+缺点：容易由于单节点速度形成短板效应
+MapReduce 计算模型实现：每个 task 会被随机分配到空闲的 Executor 上，但是该节点可能并不持有数据，所以需要经过数据的 Shuffle （移动到空闲的计算节点）才能计算。 优点：推测执行可以避免单节点执行过慢问题
+缺点：数据移动，落盘，资源申请等
+全面向量化执行引擎
+SIMD、批量按列执行
+定制化的CBO优化器
+估算每个算子的执行代价，选择代价最低的一条查询路径作为最终的物理查询计划。
+该优化器内部实现了CTEs复用、相关子查询重写、Lateral Joins, Join Reordering、Join 分布式执行策略选择、低基数优化。
+智能的物化加速视图
+自动刷新无需外部维护调度任务，组织灵活，且能够在查询时进行 SQL 改写，最大程度使用物化结果集。
+全面的湖仓分析能力
+可以作为计算引擎，分析数据湖中的数据。
+使用场景 OLAP多维分析、实时&amp;amp;统一数据查询。
+实践 提升链路流转效益：
+消费实时数据用Routine Load方式确保实现Exactly-Once语义，保证数据不丢不重。
+离线转存数据通过Broker Load和Spark Load等方式导入，且都保证了导入的原子性。
+湖仓融合:
+StarRocks 提供两种类型 Catalog：internal catalog 和 external catalog，其中前者可以查询 SR 内表，后者可以访问数据湖表如 iceberg 表，以及传统数仓表如 hive 和 thive 表。</description>
+    </item>
+  </channel>
+</rss>
