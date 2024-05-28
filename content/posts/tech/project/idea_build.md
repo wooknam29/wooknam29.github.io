@@ -11,3 +11,4 @@ date: 2024-02-07T15:05:28+08:00
 解决方法：  
 （1）maven那里选择 ignore projects  
 （2）invalidate caches 全部勾选，然后进来后到pom.xml下Reload projects，发现成功
+
