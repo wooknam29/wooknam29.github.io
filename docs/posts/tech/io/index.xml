@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>计算机网络 on nannan的博客</title>
+    <link>http://wooknam29.github.io/posts/tech/io/</link>
+    <description>Recent content in 计算机网络 on nannan的博客</description>
+    <image>
+      <title>nannan的博客</title>
+      <url>http://wooknam29.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://wooknam29.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 28 May 2024 11:08:28 +0800</lastBuildDate>
+    <atom:link href="http://wooknam29.github.io/posts/tech/io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>websocket</title>
+      <link>http://wooknam29.github.io/posts/tech/io/websocket/</link>
+      <pubDate>Tue, 28 May 2024 11:08:28 +0800</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/io/websocket/</guid>
+      <description>概览 为了解决http协议的无状态、短连接和服务端无法主动给客户端推送数据等问题而开发的新型协议。 TCP 三次握手 + 额外一次基于http协议改造的握手。
+协议格式 </description>
+    </item>
+  </channel>
+</rss>

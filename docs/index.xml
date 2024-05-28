@@ -11,43 +11,59 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 21 Feb 2024 16:43:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2024 11:08:28 +0800</lastBuildDate>
     <atom:link href="http://wooknam29.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>websocket</title>
+      <link>http://wooknam29.github.io/posts/tech/io/websocket/</link>
+      <pubDate>Tue, 28 May 2024 11:08:28 +0800</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/io/websocket/</guid>
+      <description>概览 为了解决http协议的无状态、短连接和服务端无法主动给客户端推送数据等问题而开发的新型协议。 TCP 三次握手 + 额外一次基于http协议改造的握手。
+协议格式 </description>
+    </item>
+    <item>
+      <title>注解</title>
+      <link>http://wooknam29.github.io/posts/tech/springboot/annotation/</link>
+      <pubDate>Mon, 26 Feb 2024 15:55:00 +0800</pubDate>
+      <guid>http://wooknam29.github.io/posts/tech/springboot/annotation/</guid>
+      <description>@Transactional：声明式事务管理。</description>
+    </item>
+    <item>
       <title>spark</title>
-      <link>http://wooknam29.github.io/posts/tech/data/spark/</link>
+      <link>http://wooknam29.github.io/posts/tech/bigdata/spark/</link>
       <pubDate>Wed, 21 Feb 2024 16:43:00 +0800</pubDate>
-      <guid>http://wooknam29.github.io/posts/tech/data/spark/</guid>
+      <guid>http://wooknam29.github.io/posts/tech/bigdata/spark/</guid>
       <description></description>
     </item>
     <item>
       <title>MapReduce介绍</title>
-      <link>http://wooknam29.github.io/posts/tech/data/mapreduce/</link>
+      <link>http://wooknam29.github.io/posts/tech/bigdata/mapreduce/</link>
       <pubDate>Wed, 21 Feb 2024 16:00:00 +0800</pubDate>
-      <guid>http://wooknam29.github.io/posts/tech/data/mapreduce/</guid>
+      <guid>http://wooknam29.github.io/posts/tech/bigdata/mapreduce/</guid>
       <description></description>
     </item>
     <item>
       <title>大数据基本概念</title>
-      <link>http://wooknam29.github.io/posts/tech/data/basic/</link>
+      <link>http://wooknam29.github.io/posts/tech/bigdata/basic/</link>
       <pubDate>Tue, 20 Feb 2024 19:29:00 +0000</pubDate>
-      <guid>http://wooknam29.github.io/posts/tech/data/basic/</guid>
+      <guid>http://wooknam29.github.io/posts/tech/bigdata/basic/</guid>
       <description>数据湖和数据仓 Data Lake:它可以容纳结构化数据、半结构化数据和非结构化数据，包括关系型数据库、日志文件、图像、音频、视频等。数据湖通常采用延迟处理的方式，即将数据存储在原始形式下，只在需要时进行处理和转换。数据湖提供了灵活的数据存储和处理解决方案，适用于各种数据分析和处理需求。
 Data Warehouse:是一个用于存储和管理已经经过清洗、集成和转换的结构化数据的存储库。数据仓库通常用于支持决策支持和业务智能的需求，提供了一种高度结构化和优化的数据存储和查询环境。数据仓库中的数据经过ETL（抽取、转换、加载）过程，以满足特定的分析和报告需求。
 DWS: 数据仓库系统。存储和管理已经经过清洗、集成和转换的结构化数据的存储库。
 DWD: 数据仓库设计。
 几种数据导入方式 Routine Load: Broker Load: Spark Load: Stream Load:
 bitmap indexing 位图索引 概念：用二进制01来表示某条记录的某列是否等于某个值
-优点：在进行多个条件筛选的时候，可以直接使用多个bitmap进行与操作，减少了扫描的情况
-适用场景：低基数情况、只读表和不频繁更新的表（存储和构建需要大量开销）、适合count distinct的场景、
+优点：在进行多个条件筛选的时候，可以直接使用多个bitmap进行与操作，减少了扫描的情况。能够很好加速宽表查询。
+适用场景：低基数情况、只读表和不频繁更新的表（存储和构建需要大量开销）、适合count distinct的场景
 CTEs common table expressions,常见表表达式（临时表）
-用法：WITH xxx AS</description>
+用法：WITH xxx AS
+Iceberg 一种表格式</description>
     </item>
     <item>
       <title>starrocks</title>
-      <link>http://wooknam29.github.io/posts/tech/data/starrocks/</link>
+      <link>http://wooknam29.github.io/posts/tech/bigdata/starrocks/</link>
       <pubDate>Tue, 20 Feb 2024 16:25:00 +0800</pubDate>
-      <guid>http://wooknam29.github.io/posts/tech/data/starrocks/</guid>
+      <guid>http://wooknam29.github.io/posts/tech/bigdata/starrocks/</guid>
       <description>特性和使用场景 特性 StarRocks 采用 MPP (Massively Parallel Processing) 大规模并行执行框架 MPP 计算模型实现：每个 task 被绑定到持有该数据的 Executor 上，由于 SR 表的分组分桶特性，数据会按 key 分组存储到节点上，相当于每个节点都拥有部分数据，那么使得单个查询请求可以充分利用所有执行节点的资源。
 优点：充分利用所有执行节点资源
 缺点：容易由于单节点速度形成短板效应
